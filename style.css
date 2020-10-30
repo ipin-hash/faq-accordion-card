@@ -111,6 +111,10 @@ p.accordion-title {
   transform: rotate(180deg);
   margin-left: 5px;
   float: right;
+  transition: transform 0.5s;
+}
+.accordion.active > .accordion-title::after {
+  transform: rotate(0);
 }
 .accordion-text {
   margin: 22px 0 0px 0; 
