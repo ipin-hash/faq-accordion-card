@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  line-height: 1.4;
+}
+
+:root {
+  --primary-text-color: hsl(237, 12%, 33%);
+}
+
+#background-gradient {
+  height: 100vh;
+  background: linear-gradient(hsl(273, 75%, 66%),  hsl(240, 73%, 65%));
+  padding: 5% 15% ;
+}
+
+.wrap {
+  height: 73%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 6em 0;
+}
+
+/* Image */
+
+#section-image{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.woman-desktop  {  
+  /* background-image: url(./images/illustration-woman-online-desktop.svg); */
+  left: -20%;
+  top: 13%;
+  z-index: 9;
+  width: 100%;
+  position: relative;
+}
+
+.woman-mobile, .shadow-mobile {
+  display: none;
+}
+
+
+.shadow-desktop {
+  position: absolute;
+  width: 53%;
+  top: 2%;
+  left: -13%;
+}
+
+.box {
+  /* background-image: url('./images/illustration-box-desktop.svg'); */
+  position: absolute;
+  top: 46%;
+  width: 18%;
+  left: 4%;
+  z-index: 10;
+}
+
+
+
+/* Text */
+
+#section-text{
+  flex: 1;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 1.2em;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.accordion{
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  margin-bottom: 18px;
+  margin-right: 17%;
+  padding-bottom: 10px;
+  overflow: hidden;
+  height: 2em;
+  transition: cubic-bezier(0.6, -0.28, 0.74, 0.05) 1s;
+}
+p.accordion-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.accordion-title:hover {
+  cursor: pointer;
+  color: hsl(14, 88%, 65%); 
+  font-weight: 700;
+}
+.active {
+  height: 9em;
+}
+.accordion-title::after {
+  content: url(./images/icon-arrow-down.svg);
+  font-size: 10px;
+  transform: rotate(180deg);
+  margin-left: 5px;
+  float: right;
+}
+.accordion-text {
+  margin: 22px 0 0px 0; 
+  color: hsl(240, 6%, 50%);
+  font-size: 13px;
+}
+
+
+@media (max-width : 768px ) {
+  .wrap {
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+  }
+  .woman-desktop, .box   {
+    display: none;
+  }
+
+  .woman-mobile{
+    display: block;
+  }
+
+}
