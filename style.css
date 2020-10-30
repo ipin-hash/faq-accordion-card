@@ -27,6 +27,7 @@ html, body {
   justify-content: space-between;
   background-color: #ffffff;
   padding: 6em 0;
+  box-shadow: 4px 4px 14px -5px black;
 }
 
 /* Image */
@@ -102,6 +103,7 @@ p.accordion-title {
 }
 .active {
   height: 9em;
+  /* font-weight: bold; */
 }
 .accordion-title::after {
   content: url(./images/icon-arrow-down.svg);
@@ -117,18 +119,62 @@ p.accordion-title {
 }
 
 
-@media (max-width : 768px ) {
+
+
+
+
+
+
+@media (max-width : 400px ) {
+  #background-gradient {
+    padding: 10px;  
+    height: auto;
+  }
   .wrap {
     flex-direction: column;
     padding: 0;
-    height: 100%;
+    margin-top: 35%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 15%;
   }
-  .woman-desktop, .box   {
+  
+  .woman-desktop, .box, .shadow-desktop   {
     display: none;
   }
 
   .woman-mobile{
-    display: block;
+    display: inline-block;
+    position: absolute;
+    top: 3%;
+    z-index: 8;
+    right: 8%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  .shadow-mobile {
+    top: 20%;
+    left: 0;
+    display: block;
+    position: absolute;
+    right: 0;
+    margin: 0 auto;
+  }
+  #section-text {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  h1 {
+    padding: 1.9em 0 0 0;
+    text-align: center;
+  }
+  p.accordion-title {
+    font-size: 1.1em;
+  }
+  .accordion {
+    width: 100%;
+  }
 }
